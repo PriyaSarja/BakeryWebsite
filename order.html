@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order | Sweet Crumbs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar">
+    <h1 class="logo">Sweet Crumbs</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<section class="container order-page">
+<div class="products" id="cartItems"></div>
+  <div class="products">
+    <div class="product-card">
+      <h3>Chocolate Cake</h3>
+      <p>₹500</p>
+      <input type="number" min="0" value="0" data-name="Chocolate Cake" data-price="500">
+    </div>
+
+    <div class="product-card">
+      <h3>Fresh Bread</h3>
+      <p>₹150</p>
+      <input type="number" min="0" value="0" data-name="Fresh Bread" data-price="150">
+    </div>
+
+    <div class="product-card">
+      <h3>Pastry</h3>
+      <p>₹100</p>
+      <input type="number" min="0" value="0" data-name="Pastry" data-price="100">
+    </div>
+  </div>
+
+  <div class="summary">
+    <h3>Order Summary 🧁</h3>
+    <ul id="summaryList"></ul>
+    <p id="summaryTotal">Total: ₹0</p>
+    <button id="placeOrder" class="btn">Place Order</button>
+    <p id="status"></p>
+  </div>
+</section>
+<!-- In order.html -->
+<p id="orderStatus"></p>
+<script src="js/order.js"></script>
+<footer class="footer">© 2026 Sweet Crumbs Bakery</footer>
+</body>
+</html>

@@ -1,0 +1,242 @@
+// Variables for main styles
+$primary-color: #ff5d8f;
+$secondary-color: #ff8fab;
+$border-color: #ffb3c6;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #fff0f5, #ffe4d6) fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER - Using nesting */
+.header {
+  background: $secondary-color;  // SCSS variable
+  padding: 1rem 2rem;
+
+  .navbar {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 26px;
+      background: none;
+      border: none;
+      color: white;
+    }
+  }
+}
+
+/* HERO */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1rem;
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.btn {
+  margin-top: 25px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  background: $primary-color;  // SCSS variable
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s;
+
+  &:hover {  // Using & for pseudo-class
+    transform: scale(1.1);
+  }
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 15px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+
+  &:hover {  // Using & for pseudo-class
+    transform: translateY(-12px);
+  }
+}
+
+main, .container, .order-page, .services-wrapper {
+  flex: 1;
+}
+
+/* FOOTER */
+.footer {
+  background: $secondary-color;  // SCSS variable
+  text-align: center;
+  padding: 1rem;
+  color: white;
+}
+
+/* Form elements */
+input, textarea {
+  width: 100%;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: 2px solid $border-color;  // SCSS variable
+  outline: none;
+
+  &:focus {  // Using & for pseudo-class
+    border-color: $primary-color;  // SCSS variable
+  }
+}
+
+/* SERVICES PAGE - Using nesting */
+.services-page {
+  flex: 1;
+  padding: 1rem;
+
+  .services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .service-box {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(255, 141, 171, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid $border-color;  // SCSS variable
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:hover {  // Using & for pseudo-class
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(255, 141, 171, 0.2);
+    }
+
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    h3 {
+      color: $primary-color;  // SCSS variable
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    p {
+      color: #666;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      flex-grow: 1;
+    }
+  }
+}
+
+/* Service features list - Using nesting */
+.service-features {
+  list-style: none;
+  margin: 1rem 0;
+  text-align: left;
+  padding-left: 0.8rem;
+  font-size: 0.85rem;
+
+  li {
+    margin-bottom: 0.3rem;
+    color: #555;
+    position: relative;
+    padding-left: 1.2rem;
+
+    &:before {  // Using & for pseudo-element
+      content: "✓";
+      color: $primary-color;  // SCSS variable
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+/* Service button */
+.service-btn {
+  display: inline-block;
+  background: $primary-color;  // SCSS variable
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  transition: all 0.3s;
+
+  &:hover {  // Using & for pseudo-class
+    background: $secondary-color;  // SCSS variable
+    transform: scale(1.05);
+  }
+}
+
+.order-page {
+  flex: 1;
+  padding: 2rem 1rem;
+}
