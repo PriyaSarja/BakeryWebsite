@@ -1,0 +1,440 @@
+/* ============================================
+   RESPONSIVE.CSS - MOBILE-FIRST STYLES
+   (No dark mode for phone view)
+   ============================================ */
+
+/* ===== MOBILE MENU BUTTON (Always show on mobile) ===== */
+@media (max-width: 992px) {
+  .header .navbar .menu-btn {
+    display: block;
+  }
+  
+  .header .navbar .nav-links {
+    display: none;
+  }
+}
+
+/* ===== MOBILE MENU OVERLAY (For all mobile sizes) ===== */
+@media (max-width: 992px) {
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 143, 171, 0.98);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mobile-menu-overlay.active {
+    display: flex;
+  }
+  
+  .mobile-nav-links {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    width: 90%;
+  }
+  
+  .mobile-nav-links li {
+    margin: 1.5rem 0;
+  }
+  
+  .mobile-nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.8rem 1.5rem;
+    display: inline-block;
+    border-radius: 30px;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .mobile-nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.2rem;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* ===== SMALL MOBILE (0-480px) ===== */
+@media (max-width: 480px) {
+  /* Header adjustments */
+  .header {
+    padding: 0.5rem 1rem;
+  }
+  
+  .header .navbar .logo {
+    font-size: 1.4rem;
+  }
+  
+  /* Hero section */
+  .hero {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+  }
+  
+  /* Cards */
+  .card {
+    padding: 1.2rem;
+    width: 95%;
+    margin: 0.5rem auto;
+  }
+  
+  /* Forms */
+  input, textarea {
+    padding: 0.8rem;
+    font-size: 16px;
+  }
+  
+  /* Services page */
+  .services-page .services-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  
+  .services-page .service-box {
+    padding: 1rem;
+    min-height: 220px;
+  }
+  
+  .service-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .services-page .service-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .services-page .service-box p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+  
+  /* Hide service features on very small screens */
+  .service-features {
+    display: none;
+  }
+  
+  .service-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* ===== MEDIUM MOBILE (481px - 768px) ===== */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Header */
+  .header {
+    padding: 0.75rem 1.5rem;
+  }
+  
+  /* Hero */
+  .hero {
+    padding: 2rem 1rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  /* Services */
+  .services-page .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .services-page .service-box {
+    min-height: 250px;
+    padding: 1.2rem;
+  }
+  
+  .services-page .service-box h3 {
+    font-size: 1.1rem;
+  }
+  
+  .services-page .service-box p {
+    font-size: 0.85rem;
+  }
+  
+  /* Show service features on medium screens */
+  .service-features {
+    display: block;
+    font-size: 0.8rem;
+  }
+  
+  .service-features li {
+    font-size: 0.8rem;
+    padding-left: 1rem;
+  }
+}
+
+/* ===== TABLETS (769px - 992px) ===== */
+@media (min-width: 769px) and (max-width: 992px) {
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+  
+  /* Services */
+  .services-page .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .services-page .service-box {
+    min-height: 280px;
+  }
+  
+  .services-page .service-box h3 {
+    font-size: 1.2rem;
+  }
+  
+  .services-page .service-box p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== DESKTOP (993px and above) ===== */
+@media (min-width: 993px) {
+  /* Hide mobile menu button on desktop */
+  .header .navbar .menu-btn {
+    display: none;
+  }
+  
+  /* Show desktop navigation */
+  .header .navbar .nav-links {
+    display: flex;
+  }
+  
+  /* Services grid for desktop */
+  .services-page .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .services-page .service-box {
+    min-height: 320px;
+    padding: 2rem;
+  }
+  
+  .services-page .service-box h3 {
+    font-size: 1.3rem;
+  }
+  
+  .services-page .service-box p {
+    font-size: 1rem;
+  }
+}
+
+/* ===== LARGE DESKTOP (1200px and above) ===== */
+@media (min-width: 1200px) {
+  .header .navbar {
+    max-width: 1200px;
+  }
+  
+  .hero h2 {
+    font-size: 3.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.3rem;
+  }
+}
+
+/* ===== TOUCH DEVICE OPTIMIZATIONS ===== */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects on touch devices */
+  .btn:hover,
+  .card:hover,
+  .product-card:hover,
+  .services-page .service-box:hover,
+  .service-btn:hover,
+  .mobile-nav-links a:hover {
+    transform: none;
+  }
+  
+  /* Increase touch target sizes */
+  .btn,
+  .service-btn,
+  .mobile-nav-links a,
+  .product-card input[type="number"],
+  input,
+  textarea {
+    min-height: 44px;
+  }
+  
+  .btn,
+  .service-btn,
+  .mobile-nav-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ===== LANDSCAPE ORIENTATION OPTIMIZATIONS ===== */
+@media (orientation: landscape) and (max-height: 500px) {
+  /* Compact header for landscape */
+  .header {
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Adjust hero for landscape */
+  .hero {
+    padding: 1rem;
+    min-height: auto;
+  }
+  
+  .hero h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Services grid adjustment for landscape */
+  .services-page .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  
+  .services-page .service-box {
+    min-height: 200px;
+    padding: 0.8rem;
+  }
+  
+  .service-icon {
+    font-size: 1.5rem;
+  }
+  
+  .services-page .service-box h3 {
+    font-size: 1rem;
+  }
+  
+  .services-page .service-box p {
+    font-size: 0.8rem;
+  }
+  
+  /* Mobile menu adjustments for landscape */
+  .mobile-nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .mobile-nav-links li {
+    margin: 0.5rem;
+  }
+  
+  .mobile-nav-links a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .header,
+  .footer,
+  .menu-btn,
+  .btn,
+  .service-btn,
+  .product-card input[type="number"],
+  #placeOrder,
+  .mobile-menu-overlay {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+  
+  .card,
+  .services-page .service-box,
+  .product-card,
+  .summary,
+  .order-page {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    page-break-inside: avoid;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+  
+  .hero h2 {
+    font-size: 18pt !important;
+  }
+  
+  .hero p {
+    font-size: 12pt !important;
+  }
+}
